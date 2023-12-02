@@ -52,6 +52,11 @@
   visibility: visible;
   opacity: 1;
 }
+.clickable {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
 </style>
     </head>
     <body id="page-top">
@@ -61,13 +66,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">MINESERV!!!! ТОЛЬКО ЛУЧШИЕ МОДЫ И ЛУЧШАЯ ОПТИМИЗАЦИЯ НАШЕГО КРУТОГО СЕРВЕРА</h1>
-<h2 class="text-white-50 mx-auto mt-2 mb-5" id="copy">d6.gamely.pro:25931</h2>
-<div class="tooltip">
-<button onclick="myFunction()" onmouseout="outFunc()">
-  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-  Скопировать
-  </button>
-</div>
+<h2 onclick="myFunction()"  class="clickable text-white-50 mx-auto mt-2 mb-5" id="copy">d6.gamely.pro:25931</h2>
                         
                         <a class="btn btn-primary" href="#about">Скачать моды</a>
 						<a class="btn btn-primary " href="https://tlauncher.org/installer">Скачать tLauncher</a>
@@ -80,18 +79,10 @@
       <script>
 function myFunction() {
   var copyText = document.getElementById("copy");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-  
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText.value;
+  navigator.clipboard.writeText(copyText.innerHTML);
 }
 
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
+
 </script>
     </body>
 </html>
