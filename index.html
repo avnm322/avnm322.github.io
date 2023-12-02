@@ -14,7 +14,45 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-		
+		<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
     </head>
     <body id="page-top">
      
@@ -23,7 +61,14 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">MINESERV!!!! ТОЛЬКО ЛУЧШИЕ МОДЫ И ЛУЧШАЯ ОПТИМИЗАЦИЯ НАШЕГО КРУТОГО СЕРВЕРА</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">d6.gamely.pro:25931</h2>
+<h2 class="text-white-50 mx-auto mt-2 mb-5" id="copy">d6.gamely.pro:25931</h2>
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  Скопировать
+  </button>
+</div>
+                        
                         <a class="btn btn-primary" href="#about">Скачать моды</a>
 						<a class="btn btn-primary " href="https://tlauncher.org/installer">Скачать tLauncher</a>
 						<a class="btn btn-primary" href="https://drive.google.com/file/d/1EtllmWUTdtdtKFos7PihwoVQysShNqjP/view?usp=sharing">Скачать конфиг</a>
@@ -32,6 +77,21 @@
                 </div>
             </div>
         </div>
-      
+      <script>
+function myFunction() {
+  var copyText = document.getElementById("copy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
     </body>
 </html>
