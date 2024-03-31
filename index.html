@@ -202,14 +202,7 @@
         animation: strRun 30s linear infinite;
         padding-top: 10px;
     }
-    @keyframes strRun {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
+
     .text-run{
         color: #fff;
         padding: 10px;
@@ -233,6 +226,15 @@
         background-size: cover;
         border-radius: 6px;
         color: rgba(0,0,0,0);
+    }
+    @keyframes strRun {
+        0%{
+            transform: translate(0, 0);
+        }
+
+        100%{
+            transform: translate(-160%, 0);
+        }
     }
 </style>
 <body class="d-flex flex-column h-100">
@@ -298,8 +300,11 @@
                             <h2 onclick="myFunction()"  class="clickable mb-4" id="copy">
                                 <span class="white">d9.gam</span><span class="blue">ely.pro</span><span class="red">:20773</span>
                             </h2>
-                            <a class="btn btn-download mt-3" href="#" target="_blank"><svg style="margin-right: 6px" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16.3602V17.3602C4 18.1558 4.31607 18.9189 4.87868 19.4815C5.44129 20.0441 6.20435 20.3602 7 20.3602H17C17.7956 20.3602 18.5587 20.0441 19.1213 19.4815C19.6839 18.9189 20 18.1558 20 17.3602V16.3602M16 12.3602L12 16.3602M12 16.3602L8 12.3602M12 16.3602V4.36017" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать моды</a>
+                            <div class="">
+                                <a class="btn btn-download mt-3" href="#" target="_blank"><svg style="margin-right: 6px" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16.3602V17.3602C4 18.1558 4.31607 18.9189 4.87868 19.4815C5.44129 20.0441 6.20435 20.3602 7 20.3602H17C17.7956 20.3602 18.5587 20.0441 19.1213 19.4815C19.6839 18.9189 20 18.1558 20 17.3602V16.3602M16 12.3602L12 16.3602M12 16.3602L8 12.3602M12 16.3602V4.36017" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать моды</a>
+                            </div>
                             <a class="btn secondary mt-3 ms-2" href="#" target="_blank">Скачать ресурспаки</a>
+                            <a class="btn secondary mt-3 ms-2" href="#" target="_blank">Скачать лаунчер</a>
                         </div>
                          <img src="putin.png" class="putin mt-4" alt="">
                     </div>
@@ -315,7 +320,7 @@
 <script>
     function myFunction() {
         var copyText = document.getElementById("copy");
-        navigator.clipboard.writeText(copyText.innerHTML);
+        navigator.clipboard.writeText('d9.gamely.pro:20773');
     }
 </script>
 </body>
