@@ -9,8 +9,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RUSSIA CRAFT</title>
+    <script href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </head>
 <style>
     @font-face {
@@ -176,6 +178,16 @@
         width: calc(100% + 1.5rem);
         z-index: -1;
     }
+    .box-w-100{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        font-size: 32px;
+        color: #CBD4D6;
+    }
+    .box-w-100:after{
+        background: rgba(0,0,0,0);
+    }
     body{
         background: linear-gradient(#17181f, #131524);
     }
@@ -217,7 +229,6 @@
         border-radius: 1rem;
         font-weight: 600;
         font-size: 15px;
-        cursor: pointer;
     }
     .villager{
         background-image: url("villager.jpg");
@@ -258,6 +269,9 @@
         color: #000;
         text-decoration: none;
         font-weight: 600;
+    }
+    .pointer{
+        cursor: wait;
     }
 </style>
 <body class="d-flex flex-column h-100">
@@ -323,7 +337,8 @@
 <main class="mt-4">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+
+            <div class="col-12 col-lg-4">
                 <div class="box w-100 mx-auto">
                     <img src="logo.png" class="logo--img w-100" alt="">
                     <div class="text-center">
@@ -331,12 +346,20 @@
                             <span class="white">d9.gam</span><span class="blue">ely.pro</span><span class="red">:20773</span>
                         </h2>
                         <div class="">
-                            <a class="btn btn-download mt-3" href="https://drive.google.com/file/d/1XcQ88Js1HtL8aOP5oBcy2XPEM_7FgQJz/view?usp=sharing" target="_blank"><svg style="margin-right: 6px" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16.3602V17.3602C4 18.1558 4.31607 18.9189 4.87868 19.4815C5.44129 20.0441 6.20435 20.3602 7 20.3602H17C17.7956 20.3602 18.5587 20.0441 19.1213 19.4815C19.6839 18.9189 20 18.1558 20 17.3602V16.3602M16 12.3602L12 16.3602M12 16.3602L8 12.3602M12 16.3602V4.36017" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать моды</a>
+                            <a class="btn btn-download mt-3" href="https://drive.google.com/file/d/1mOs--NdD7NTgj5lunTP5lJq-ji04Ljqk/view?usp=sharing" target="_blank"><svg style="margin-right: 6px" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16.3602V17.3602C4 18.1558 4.31607 18.9189 4.87868 19.4815C5.44129 20.0441 6.20435 20.3602 7 20.3602H17C17.7956 20.3602 18.5587 20.0441 19.1213 19.4815C19.6839 18.9189 20 18.1558 20 17.3602V16.3602M16 12.3602L12 16.3602M12 16.3602L8 12.3602M12 16.3602V4.36017" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Скачать моды</a>
                         </div>
                         <a class="btn secondary mt-3 ms-2" href="#" target="_blank" style="opacity: 0.5;">Скачать ресурспаки</a>
                         <a class="btn secondary mt-3 ms-2" href="https://llaun.ch/ru" target="_blank">Скачать лаунчер</a>
                     </div>
                     <img src="putin.png" class="putin mt-4" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="box box-w-100 px-lg-5">
+                    <p class="fs-30 fwbl text-center mt-3 clr-white">ВОЙНА. ПАРКУР. СИСЬКИ</p>
+                    <p class="fs-30 fwbl mt-3 ">Обновления</p>
+                    <p class="fs-18 mt-2 fwb">Добавлен мод на пластинки <a href="https://drive.google.com/file/d/1AATrquDn53qW8nj2fkZx1-cYFz6GeuAU/view?usp=sharing" target="_blank">скачать</a></p>
+                    <p class="fs-18 mt-2 fwb pointer">Удалить мод на генерацию кораблей <span class="red" data-bs-toggle="tooltip" data-bs-placement="top" title="ХОХЛАМ ПИЗДЕЦ" >DungeonsAriseSevenSeas</span></p>
                 </div>
             </div>
         </div>
